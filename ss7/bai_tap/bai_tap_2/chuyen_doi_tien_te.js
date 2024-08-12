@@ -1,19 +1,19 @@
-function chuyen_doi_tien() {
+function chuyenDoiTien() {
     let x = document.getElementById("number").value;
     let a = document.getElementById("from").value;
     let b = document.getElementById("to").value;
-    let RESULT;
+    let result;
     if (a == "USD" && b == "VND") {
-        RESULT = "RESULT:" + (x*23000) + "Đ";
+        result = "RESULT:" + (x*23000) + "Đ";
     }
     else if (a == "VND" && b == "USD") {
-        RESULT = "RESULT:" + (x/23000) + "Đ";
+        result = "RESULT:" + (x/23000) + "Đ";
     }
     else if (a == "USD") {
-        RESULT = "RESULT:" + x + "$";
+        result = "RESULT:" + x + "$";
     }
     else  {
-        RESULT = "RESULT:" + x + "Đ";
+        result = "RESULT:" + x + "Đ";
     }
-    alert(RESULT);
+    alert(result);
 }
