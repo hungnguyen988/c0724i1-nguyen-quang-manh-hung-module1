@@ -5,7 +5,6 @@ if (a>b && a>c) {
     alert(" a max");
 } else if (b>c) {
     alert("b max");
-}
-else {
+} else {
     alert("c max");
 }
