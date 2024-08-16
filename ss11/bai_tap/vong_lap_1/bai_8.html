@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="choi()">let go</button>
+<script>
+    function choi(){
+        let n = +prompt("nhập giá trị lớn nhất cần đoán:");
+        let randomNumber = Math.floor(Math.random() * n);
+        let count=0;
+        while (count<4){
+            let i = +prompt("nhập dự đoán");
+            if(i===randomNumber){
+                alert("chúc mừng");
+                break;
+            } else if (i<randomNumber){
+                alert("số dự đoán bé hơn ");
+            } else {
+                alert("số dự đoán lớn hơn");
+            }
+            count++;
+            if (count===4){
+                alert("hết lượt , kết quả là : " + randomNumber);
+            }
+
+        }
+    }
+</script>
+</body>
+</html>

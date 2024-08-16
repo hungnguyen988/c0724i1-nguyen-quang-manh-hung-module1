@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i=1;
+    let j=1;
+    let bang= "<table border='1' cellspacing='0' cellpadding='5'>";
+    for ( i=1;i<10;i++){
+        let row = "<tr>";
+        for(j=1;j<10;j++){
+            let col = "<td>" + j + "*" + i + "=" + j*i + "</td>";
+            row += col;
+        }
+        row= row+ "</tr>";
+        bang += row;
+    }
+    bang = bang + "</table>";
+    document.write(bang);
+</script>
+
+</body>
+</html>

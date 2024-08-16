@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=0;
+    let b=1;
+    document.write(0 + "<br>");
+    document.write(1 + "<br>");
+    n= +prompt("nhập n");
+    for (let i=2;i<n;i++){
+        let tong = a + b;
+        document.write(tong + "<br>");
+        a=b;
+        b=tong;
+    }
+</script>
+</body>
+</html>
