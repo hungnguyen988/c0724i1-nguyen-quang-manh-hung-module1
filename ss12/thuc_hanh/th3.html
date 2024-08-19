@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang=[-3,5,1,2,3,10];
+    let x = prompt("nhập giá trị cần tìm:");
+    let i=(-1);
+    mang.forEach((value,index)=>{
+        if (x==value){
+            i=index;
+        }
+    });
+    if (i>(-1)){
+        alert("phần tử : " + x + " xuất hiện tại vị trí thứ : " + i);
+    } else {
+        alert("Phần tử: " + x + " không có trong mảng");
+    }
+</script>
+</body>
+</html>

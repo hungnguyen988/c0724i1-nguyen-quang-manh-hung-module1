@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre id="in"></pre>
+<script>
+    let chieuRong=+prompt("nhập chiều rông ");
+    let chieuDai=+prompt("nhập chều dài");
+    let ketQua="";
+    for (let i=1;i<=chieuRong;i++){
+        for(let j=1;j<=chieuDai;j++){
+            if (i===1||i===chieuRong||j===1||j===chieuDai){
+                ketQua+="*";
+            } else{
+                ketQua+=" ";
+            }
+        }
+        ketQua+= "\n";
+    }
+    document.getElementById("in").innerText=ketQua;
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang=[-3,5,1,2,3,10];
+    let truoc=0;
+    let sau=mang.length-1;
+    while (truoc<sau){
+        let x =mang[truoc];
+        mang[truoc]=mang[sau];
+        mang[sau]=x;
+        truoc++;
+        sau--;
+    }
+    document.write(mang);
+</script>
+</body>
+</html>

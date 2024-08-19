@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap">
+<button type="button" onclick="nhapMang()">nhap mang</button>
+<button type="button" onclick="soAm()">đếm số âm</button>
+<script>
+    let mang=[];
+    function nhapMang(){
+        let giaTri=+document.getElementById("nhap").value;
+        mang.push(giaTri);
+        document.getElementById("nhap").value="";
+    }
+    function soAm(){
+        let dem=0;
+        for (let i=0;i<mang.length;i++){
+            if (mang[i]<0 && mang[i]%1===0){
+                dem++;
+            }
+        }
+        alert("mảng có chứa : " + dem + " số nguyên âm");
+    }
+</script>
+</body>
+</html>

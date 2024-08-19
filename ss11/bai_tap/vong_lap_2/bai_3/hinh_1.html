@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre id="in"></pre>
+<script>
+    const soHang = 5;
+    let ketQua = '';
+    for (let i = 1; i <= soHang; i++) {
+        let hinh = '';
+        for (let k = 0; k < i; k++) {
+            hinh += '*';
+        }
+        ketQua += hinh.trim() + '\n';
+    }
+    document.getElementById('in').innerText = ketQua;
+</script>
+</body>
+</html>

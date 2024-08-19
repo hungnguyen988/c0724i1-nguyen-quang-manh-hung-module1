@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap">
+<button type="button" onclick="nhapMang()">add</button>
+<button type="button" onclick="tim()">result</button>
+<script>
+    let mang=[];
+    let x=0;
+    function nhapMang(){
+        mang[x]=+document.getElementById("nhap").value;
+        document.getElementById("nhap").value="";
+        x++;
+    }
+    function tim(){
+        let max=mang[0];
+        let tong=0;
+        for (let i =0;i<mang.length;i++){
+            if(max<mang[i]){
+                max=mang[i];
+            }
+            tong+=mang[i];
+        }
+        let trungBinh= tong/mang.length;
+        alert("giá trị ln nhất : " + max + " ; giá trị trung bình : " + trungBinh);
+    }
+</script>
+</body>
+</html>

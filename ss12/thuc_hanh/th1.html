@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap">
+<button type="button" onclick="cong()">cong</button>
+<button type="button" onclick="displlay()">hien thi</button>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let ham = [];
+    function cong(){
+        ham[x]=document.getElementById("nhap").value;
+        alert("phần tử : " + ham[x] + " đã được thêm vào tại vị trí có chỉ số " + x);
+        document.getElementById("nhap").value="";
+        x++;
+    }
+    function displlay(){
+        let hienThi = "";
+        for (let i=1;i<=ham.length;i++){
+            hienThi+= "phần tử thứ " + i + " : " + ham[i-1] + "<br>";
+        }
+        document.getElementById("result").innerHTML=hienThi;
+    }
+</script>
+</body>
+</html>

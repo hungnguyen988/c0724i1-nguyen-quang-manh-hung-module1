@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang=[];
+    let n = +prompt("nhập độ dài mảng");
+    let i=0;
+    for(i=0;i<n;i++){
+        let x = +prompt("nhập mảng");
+        mang.push(x);
+    }
+    let v = +prompt("nhập số cần tìm");
+    let found=false;
+    for (i=0;i<n;i++){
+        if (v===mang[i]){
+            found=true;
+            for (let j=i;j<n-1;j++){
+                mang[j]=mang[j+1];
+            }
+            mang[mang.length-1]=0;
+        }
+    }
+    if (found){
+        alert("đã xóa " + v + " khỏi mảng");
+        document.write(mang);
+    } else{
+        alert("phần tử " + v + " không có trong mảng");
+    }
+</script>
+</body>
+</html>
