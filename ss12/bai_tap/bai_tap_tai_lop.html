@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập n");
+    while ( n>20|| n<0||isNaN(n)||(n%1!=0) ){
+        n = +prompt("nhập n");
+    }
+    let demLe = 0;
+    let demChan = 0;
+    mang = [];
+    for (let i = 0; i < n; i++) {
+        let x = prompt("nhập phần tử trong mảng: ");
+        mang.push(x);
+        alert(mang);
+        if (x % 2 === 0) {
+            demChan++;
+        } else {
+            demLe++;
+        }
+    }
+    if (demChan == demLe) {
+        alert("ok");
+    } else {
+        alert("no");
+    }
+</script>
+</body>
+</html>

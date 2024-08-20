@@ -10,13 +10,16 @@
     let n = +prompt("nhập độ dài mảng");
     let i=0;
     for(i=0;i<n;i++){
-        let x = +prompt("nhập mảng");
+        let x = prompt("nhập phần tử : " + i);
+        while (parseInt(x)!=x){
+            x = prompt("nhập lại phần tử : " + i);
+        }
         mang.push(x);
     }
-    let v = +prompt("nhập số cần tìm");
+    let v = parseInt(prompt("nhập số cần tìm"));
     let found=false;
     for (i=0;i<n;i++){
-        if (v===mang[i]){
+        if (v==mang[i]){
             found=true;
             for (let j=i;j<n-1;j++){
                 mang[j]=mang[j+1];

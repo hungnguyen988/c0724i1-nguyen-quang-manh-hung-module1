@@ -6,15 +6,15 @@
 </head>
 <body>
 <script>
-
     let mang=[];
     for (let i=0;i<10;i++){
-        let giaTri= +prompt("nhập mảng");
+        let giaTri= parseInt(prompt("nhập phần tử " + (i+1) + ":"));
         mang.push(giaTri);
-
     }
-
-
+    mang.sort(function (a,b){
+        return b-a;
+    });
+    document.write(mang);
 </script>
 </body>
 </html>
