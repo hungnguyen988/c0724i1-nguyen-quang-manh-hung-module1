@@ -12,10 +12,17 @@
         n= +prompt("nhập độ dài mảng : ");
     } while (n<0||parseInt(n)!=n)
     for (let i=0;i<n;i++){
-        let phanTu = prompt("nhập phần th thứ " + i );
+        let phanTu = prompt("nhập phần th thứ " + i  + "là 1 ký tự ");
         mang.push(phanTu);
     }
-    
+    let dem=0;
+    for(let j=0;j<mang.length;j++){
+        if(!isNaN(mang[j])){
+            dem++
+        }
+    }
+    alert(" số ký tự số trong mảng : " + dem);
+
 </script>
 </body>
 </html>

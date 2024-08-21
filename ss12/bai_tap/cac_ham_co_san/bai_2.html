@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập số n : ");
+    let x = n[0];
+    let mang = [x];
+    for (let i = 1; i < n.length; i++) {
+        if ((n[i] % 2 == 0) && (n[i - 1] % 2 == 0)) {
+            mang.push("-", n[i]);
+        } else {
+            mang.push(n[i]);
+        }
+    }
+    document.write(mang.join(""));
+</script>
+</body>
+</html>

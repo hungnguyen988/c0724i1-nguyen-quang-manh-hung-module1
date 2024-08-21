@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang1 = ["one", "two", "three", "four"];
+    let mang2 = ["một", "hai", "ba", "bốn"];
+    let canTim = prompt("nhập từ cần tìm");
+    let viTri = mang1.indexOf(canTim);
+    if (viTri != (-1)) {
+        alert("từ tiếng việt tương ứng là : " + mang2[viTri]);
+    } else {
+        alert("từ này không có trong từ điển");
+    }
+</script>
+</body>
+</html>

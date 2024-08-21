@@ -6,28 +6,30 @@
 </head>
 <body>
 <input id="nhap">
-<button type="button"onclick="nhapMang()">nhap</button>
-<button type="button"onclick="daoMang()">đảo mảng</button>
+<button type="button" onclick="nhapMang()">nhap</button>
+<button type="button" onclick="daoMang()">đảo mảng</button>
 <div id="hien_thi"></div>
 <script>
-    let mang=[];
-    function nhapMang(){
-        let giaTri=document.getElementById("nhap").value;
+    let mang = [];
+
+    function nhapMang() {
+        let giaTri = document.getElementById("nhap").value;
         mang.push(giaTri);
-        document.getElementById("nhap").value="";
+        document.getElementById("nhap").value = "";
     }
-    function daoMang(){
-        let x=mang[0];
-        truoc=0;
-        sau=mang.length-1;
-        while (truoc<sau){
-            x=mang[truoc];
-            mang[truoc]=mang[sau];
-            mang[sau]=x;
+
+    function daoMang() {
+        let x = mang[0];
+        truoc = 0;
+        sau = mang.length - 1;
+        while (truoc < sau) {
+            x = mang[truoc];
+            mang[truoc] = mang[sau];
+            mang[sau] = x;
             truoc++;
             sau--;
         }
-        document.getElementById("hien_thi").innerText=mang;
+        document.getElementById("hien_thi").innerText = mang;
     }
 </script>
 </body>
