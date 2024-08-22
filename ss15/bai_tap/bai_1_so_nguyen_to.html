@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = +prompt("nhập x");
+
+    function kiemTra(x) {
+        let count = false;
+        for (let i = 2; i < x; i++) {
+            if (x % i == 0) {
+                count = true;
+                break;
+            }
+        }
+        if (count) {
+            alert(x + " không phải là số nguyên tố");
+        } else {
+            alert(x + " là số nguyên tố");
+        }
+    }
+
+    kiemTra(x);
+    function tim(){
+        let mang = [];
+        let dem = 0;
+        for (let i=3;i<1000;i++){
+            let count = true;
+
+            for (let j=2;j<i;j++){
+                if (i % j == 0) {
+                    count = false;
+                    break;
+                }
+            }
+            if (count){
+                mang.push(i);
+                dem++;
+            }
+        }
+        mang = mang.join(", ");
+        document.write(" có " + dem + " số nguyên tố dưới 1000 : " );
+        document.write(mang);
+    }
+    tim();
+
+</script>
+</body>
+</html>

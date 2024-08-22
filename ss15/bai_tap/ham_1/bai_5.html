@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let mang2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function ham(sao) {
+        let viTri = mang1.indexOf(sao);
+        if (viTri > -1) {
+            return mang2[viTri];
+        } else {
+            result = "không tìm thấy chòm sao";
+            return result;
+
+        }
+    }
+
+    let sao = prompt(" nhập ngôi sao cần tìm")
+    alert(ham(sao));
+</script>
+</body>
+</html>

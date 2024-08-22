@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTra(x, y, z) {
+        if (x > 0 && y > 0 && z > 0 && (x + y) > z && (x + z) > y && (y + z) > x) {
+            if (z == Math.sqrt(x * x + y * y) || x == Math.sqrt(y * y + z * z) || y == Math.sqrt(x * x + z * z)) {
+                alert("đây là 3 cạnh của tam giác vuông");
+            } else {
+                alert("đây chỉ là 3 cạnh của tam giác");
+            }
+        } else {
+            alert("đây không phải là cạnh tam giác");
+        }
+    }
+
+    let x, y, z;
+    do {
+        x = +prompt("nhập x");
+    } while (isNaN(x));
+    do {
+        y = +prompt("nhập y");
+    } while (isNaN(y));
+    do {
+        z = +prompt("nhập z");
+    } while (isNaN(z));
+    kiemTra(x, y, z);
+</script>
+</body>
+</html>

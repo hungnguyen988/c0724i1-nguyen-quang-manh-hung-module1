@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function metToFeet(x) {
+        let result1 = 0.305 * x;
+        return result1;
+    }
+
+    function feetToMet(y) {
+        let result2 = 3.279 * y;
+        return result2;
+    }
+
+    let x = +prompt("nhâp giá trị meter đổi sang feet");
+    let y = +prompt("nhâp giá trị feet đổi sang meter");
+    document.write(x + "meter = " + metToFeet(x) + " feet" + "<br>");
+    document.write(y + "feet = " + feetToMet(y) + " meter");
+</script>
+</body>
+</html>

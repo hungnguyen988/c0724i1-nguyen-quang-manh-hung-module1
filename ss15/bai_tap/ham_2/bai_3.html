@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function ham(x) {
+        giaThua = 1;
+        for (let i = 1; i <= x; i++) {
+            giaThua = giaThua * i;
+        }
+        return giaThua;
+    }
+
+    let x = parseInt(prompt("nhập số "));
+    alert("giai thưà của " + x + " là  " + ham(x));
+</script>
+</body>
+</html>
