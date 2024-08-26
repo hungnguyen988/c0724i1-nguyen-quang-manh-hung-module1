@@ -1,32 +1,19 @@
 class Switch {
     constructor() {
         this.status = false;
+        this.lamp = null;
     }
 
     turnOffSwitch() {
-        if (this.status) {
-            this.status = false;
-            alert("đã tắt công tắc");
-        } else {
-            alert("công tắc đã được tắt từ trước");
-        }
+        this.lamp.turnOffLamp();
     }
 
     turnOnSwitch() {
-        if (!this.status) {
-            this.status = true;
-            alert("đã bật công tắc");
-        } else {
-            alert("công tắt đã được bật từ trước");
-        }
+        this.lamp.turnOnLamp();
     }
 
     connectToLamp(lamp) {
-        if (this.status) {
-            lamp.turnOnLamp();
-        } else {
-            lamp.turnOffLamp();
-        }
+        this.lamp = lamp;
     }
 }
 
@@ -58,11 +45,6 @@ class Lamp {
 let switch1 = new Switch();
 let lamp1 = new Lamp("đèn ngủ");
 let lamp2 = new Lamp("đèn học");
-
-switch1.turnOnSwitch();
 switch1.connectToLamp(lamp1);
-switch1.connectToLamp(lamp2);
-
 switch1.turnOffSwitch();
-switch1.connectToLamp(lamp1);
-switch1.connectToLamp(lamp2);
+switch1.turnOnSwitch();

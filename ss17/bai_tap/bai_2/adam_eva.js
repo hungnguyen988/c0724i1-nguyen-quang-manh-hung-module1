@@ -8,7 +8,6 @@ class Apple {
             this.weight--;
         } else {
             alert("đã hết táo");
-            ;
         }
     }
 }
@@ -25,13 +24,11 @@ class Human {
     }
 
     eatApple(apple) {
-        if (apple.weight > 0) {
-            apple.loseWeight();
-            this.weights++;
-            alert("khối lượng quả táo :" + apple.weight + "khối lượng người: " + this.weights);
-        } else {
-            alert("táo này đã hết , bạn chỉ có thể ăn bằng trí tưởng tượng thôi ");
-        }
+        this.checkWeightApple(apple);
+        apple.loseWeight();
+        this.weights++;
+        alert("khối lượng quả táo :" + apple.weight + "khối lượng người: " + this.weights);
+
     }
 
     checkWeightApple(apple) {
