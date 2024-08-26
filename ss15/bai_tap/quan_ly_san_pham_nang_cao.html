@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        td,th {
+            border: 1px solid #737373;
+            padding: 5px;
+        }
+
+        thead {
+            background-color: #2f2fb6;
+            color: white;
+        }
+
+        .btn-delete {
+            background-color: red;
+            color: white;
+        }
+        .btn-delete1 {
+            border: white;
+        }
+
+    </style>
 </head>
 <body>
 <input type="text" id="nhap">
-<input type="text" id="luu_tam" hidden>
+<input type="text" id="luu_tam_1" hidden>
+<input type="text" id="luu_tam_2" hidden>
 <button type="button" onclick="add()">ADD</button>
 <button type="button" onclick="sua()">EDIT</button>
 <table>
