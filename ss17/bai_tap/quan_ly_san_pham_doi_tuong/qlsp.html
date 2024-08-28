@@ -10,8 +10,22 @@
     <input type="number" id="priceProduce" placeholder="Giá sản phẩm" >
     <input type="number" id="quantityProduce" placeholder="Số lượng sản phẩm" >
     <input type="hidden" id="idProduce">
-    <button type="button" onclick="productManager.addProduct()">Add</button>
-    <button type="button" onclick="productManager.editProduct()">Update</button>
+    <button type="button" onclick="product1.add()">Add</button>
+    <button type="button" onclick="product1.update()">Update</button>
 </form>
+<table   border="1">
+    <thead>
+    <th>STT</th>
+    <th>Tên Sản Phẩm</th>
+    <th>Gía Sản Phẩm</th>
+    <th>Số Lượng</th>
+    </thead>
+    <tbody id="list1">
+
+    </tbody>
+
+</table>
+
+<script src="quan_ly_san_pham_oop.js"></script>
 </body>
 </html>
