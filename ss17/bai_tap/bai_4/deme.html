@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #timer {
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+            background-color: #fff;
+            border: 2px solid #333;
+            padding: 10px 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .message {
+            display: none; /* Mặc định ẩn đi */
+            position: fixed; /* Cố định trên màn hình */
+            top: 50%; /* Căn giữa theo chiều dọc */
+            left: 50%; /* Căn giữa theo chiều ngang */
+            transform: translate(-50%, -50%); /* Đảm bảo căn giữa chính xác */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8); /* Màu nền đen với độ trong suốt */
+            color: blue; /* Màu chữ trắng */
+            font-size: 24px;
+            border-radius: 8px;
+            text-align: center;
+            z-index: 1000; /* Đảm bảo hiển thị phía trên mọi thứ khác */
+        }
+    </style>
+</head>
+<body>
+//thowif gian
+<div id="timer">Thời gian còn lại: <span id="time">20</span> giây</div>
+
+
+
+<button id="hidden" hidden></button>
+<div id="result"></div>
+<div id="message" class="message"></div>
+<script>
+    let array = new Array(10);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = new Array(10)
+        for (let j = 0; j < array[i].length; j++) {
+            array[i][j] = ""
+        }
+    }
+    display();
+
+    function display() {
+        let tableString = `<table border="1" style="border-collapse: collapse">`;
+        for (let i = 0; i < array.length; i++) {
+            tableString += `<tr>`
+            for (let j = 0; j < array[i].length; j++) {
+                tableString += ` <td style="width: 25px; height: 25px; text-align: center" onclick="play(${i},${j})">${array[i][j]}</td>`
+            }
+            tableString += `</tr>`
+        }
+        tableString += `</table>`
+        document.getElementById('result').innerHTML = tableString;
+    }
+
+    function play(i, j) {
+
+
+        if (array[i][j] == "") {
+            let value = document.getElementById("hidden").value;
+            if (value == "X") {
+                array[i][j] = "O"
+            } else {
+                array[i][j] = "X"
+            }
+
+        }
+        display();
+        document.getElementById("hidden").value = array[i][j];
+        checkWinner();
+
+
+    }
+
+    function checkWinner() {
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j]!=""){
+                    if (array[i][j] !== "") {
+                        if ((array[i][j + 1] === array[i][j] && array[i][j + 2] === array[i][j] && array[i][j + 3] === array[i][j] && array[i][j + 4] === array[i][j]) ||
+                            (array[i + 1][j + 1] === array[i][j] && array[i + 2][j + 2] === array[i][j] && array[i + 3][j + 3] === array[i][j] && array[i + 4][j + 4] === array[i][j]) ||
+                            (array[i + 1][j] === array[i][j] && array[i + 2][j] === array[i][j] && array[i + 3][j] === array[i][j] && array[i + 4][j] === array[i][j]) ||
+                            (array[i - 1][j + 1] === array[i][j] && array[i - 2][j + 2] === array[i][j] && array[i - 3][j + 3] === array[i][j] && array[i - 4][j + 4] === array[i][j])
+                        ) {
+
+                            alert("người chơi " + array[i][j] + "thắng");
+
+                            for (let i = 0; i < array.length; i++) {
+                                for (let j = 0; j < array[i].length; j++) {
+                                    array[i][j] = "";
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+    let timeRemaining = 20; // Thời gian đếm ngược (giây)
+
+    function updateTimer() {
+        const timerElement = document.getElementById("time");
+
+        if (timeRemaining > 0) {
+            timeRemaining -= 1;
+            timerElement.textContent = timeRemaining;
+            setTimeout(updateTimer, 1000); // Cập nhật mỗi giây
+        } else {
+            document.getElementById("timer").textContent = "Hết giờ!";
+            // Có thể thêm logic khi hết giờ ở đây
+        }
+    }
+
+    // Bắt đầu đếm thời gian
+    updateTimer();
+
+
+</script>
+</body>
+</html>

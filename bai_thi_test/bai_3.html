@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let array = new Array(10);
+    let fibo = [0, 1];
+    for (let i = 2; i < array.length; i++) {
+        tong = a + b;
+        fibo.push(tong);
+        a = b;
+        b = tong;
+    }
+    alert(fibo);
+
+    function check(array) {
+        let result = [];
+        for (let i = 0; i < array.length; i++) {
+            let kiemTra = fibo.includes(array[i]);
+            if (kiemTra) {
+                result.push(array[i]);
+            }
+        }
+        result.sort((a, b) => a - b);
+        return result;
+    }
+
+    array = [1, 2, 3, 4, 5, 6, 13, 21, 9, 0];
+    alert(check(array));
+</script>
+</body>
+</html>

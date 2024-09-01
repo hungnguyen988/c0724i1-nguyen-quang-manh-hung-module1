@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function vietTat(string) {
+        let array = string.split(" ");
+        if (array.length == 1) {
+            return "chuỗi chỉ có 1 từ không cần viết tắt";
+        } else {
+            let acronym = "";
+            for (let i = 0; i < array.length; i++) {
+                if ((array[i] >= "a" && array[i] <= "z") || (array[i] >= "A" && array[i] <= "Z")) {
+                    let kyTu = array[i][0].toUpperCase();
+                    acronym += kyTu;
+                }
+            }
+            return acronym;
+        }
+
+    }
+
+    let string = "  codegym  Việt   nam"
+    alert(vietTat(string));
+
+</script>
+</body>
+</html>

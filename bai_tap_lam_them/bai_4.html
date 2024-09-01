@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(string) {
+        let capitalLetters = 0;
+        let lowercaseLetters = 0;
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] >= "A" && string[i] <= "Z") {
+                capitalLetters++;
+            } else if (string[i] >= "a" && string[i] <= "z") {
+                lowercaseLetters++;
+            }
+        }
+        if (capitalLetters == lowercaseLetters) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    let string = "aD.c";
+    alert(check(string));
+</script>
+</body>
+</html>

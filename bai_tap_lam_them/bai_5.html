@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    do {
+        n = prompt("nhập n ");
+    } while (parseInt(n) != n || n % 2 != 0)
+    array = [];
+    for (let i = 0; i < n; i++) {
+        let value = prompt("nhập phần tử " + i);
+        array.push(value);
+    }
+    alert(array);
+    let check = true;
+    for (let i = 0; i < array.length - 1; i = i + 2) {
+        if (array[i] >= array[i + 1]) {
+            check = false;
+            break;
+        }
+    }
+    if (check) {
+        alert("ok");
+    } else {
+        alert("no");
+    }
+</script>
+</body>
+</html>

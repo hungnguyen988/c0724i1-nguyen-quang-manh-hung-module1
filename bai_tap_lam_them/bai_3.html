@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập độ dài mảng "));
+    let mang = [];
+    for (let i = 0; i < n; i++) {
+        let phanTu = prompt("nhập phần tử : " + (i + 1));
+        mang.push(phanTu);
+    }
+    alert(mang);
+    let mangTangDan = true;
+    let mangGiamDan = true;
+    for (let i = 0; i < mang.length - 1; i++) {
+        if (mang[i] >= mang[i + 1]) {
+            mangTangDan = false;
+            break;
+        }
+    }
+    for (let i = 0; i < mang.length; i++) {
+        if (mang[i] <= mang[i + 1]) {
+            mangGiamDan = false;
+            break;
+        }
+    }
+    if (mangTangDan) {
+        alert("đây là mảng tăng dần")
+    } else if (mangGiamDan) {
+        alert("đây là mảng giảm dần")
+    } else {
+        alert("đây là mảng không được sắp xếp");
+    }
+</script>
+</body>
+</html>
