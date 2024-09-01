@@ -14,17 +14,17 @@
         array[i] = prompt("nhập phần tử có chỉ số " + i + "vào mảng")
     }
     alert(array);
-    let trungBinh = 0;
+    let sum = 0;
     let count = 0;
     for (let i = 0; i < array.length; i++) {
         if (i % 3 === 0 && array[i] % 5 === 0) {
             count++;
-            trungBinh += parseInt(array[i]);
+            sum += parseInt(array[i]);
 
         }
     }
     if (count > 0) {
-        alert("giá trị cần tìm là : " + (trungBinh / count))
+        alert("giá trị cần tìm là : " + (sum / count))
 
     } else {
         alert("không có phần tử nào đáp ứng yêu cầu ")
